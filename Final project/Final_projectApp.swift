@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 @main
 struct Final_projectApp: App {
+    
+    init(){
+        
+        FirebaseConfiguration.shared.setLoggerLevel(.debug)
+        FirebaseApp.configure()
+        
+    }
+    
     var body: some Scene {
         WindowGroup {
-            HomePage()
+            CBT_Journal()
         }
     }
 }
